@@ -35,16 +35,16 @@ ProjectMemo 解决的就是这个问题：**读一次，记下来，永久复用
 ```markdown
 # ProjectMemo — [项目名称]
 
-> 📅 最后更新: YYYY-MM-DD HH:MM | 📄 跟踪文件: N 个 | 🔖 Git: abc1234
+>  最后更新: YYYY-MM-DD HH:MM |  跟踪文件: N 个 |  Git: abc1234
 
-## 📁 项目概览
+##  项目概览
 
 - **项目类型**: [Web 应用 / CLI 工具 / 库 / ...]
 - **技术栈**: [React + TypeScript / Python FastAPI / ...]
 - **入口文件**: [路径]
 - **构建/运行命令**: [关键命令]
 
-## 📁 目录结构
+##  目录结构
 
 ```
 project/
@@ -56,7 +56,7 @@ project/
 └── config/        # 配置文件
 ```
 
-## 📄 文件索引
+##  文件索引
 
 > 每个文件条目约 3-5 行，只记关键信息
 
@@ -71,14 +71,14 @@ project/
 - **依赖**: `src/utils/cn.ts`, `react`
 - **被引用**: 全局 15+ 处
 
-## 🔗 模块关系
+##  模块关系
 
 - **utils/** → 被所有模块依赖，零外部依赖
 - **components/** → 依赖 utils/，被 pages/ 引用
 - **pages/** → 依赖 components/ + utils/，是顶层组装层
 - **services/** → 依赖 utils/，负责 API 调用，被 pages/ 引用
 
-## 📝 变更记录
+##  变更记录
 
 | 时间 | 类型 | 文件 | 说明 |
 |------|------|------|------|
