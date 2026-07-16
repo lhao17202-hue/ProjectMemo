@@ -1,0 +1,10 @@
+# ProjectMemo workspace (test outputs)
+project-memo-workspace/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
