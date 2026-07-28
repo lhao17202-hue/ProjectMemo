@@ -98,7 +98,8 @@ project/
    - 存在 → 进入「增量更新」流程
 
 2. **读取已有 memo，对比当前项目状态**：
-   - 用 `git diff --name-only HEAD` 检查自上次记录以来有哪些文件变动
+   - 用 `git diff --name-only HEAD` 检查自上次记录以来有哪些已跟踪文件变动
+   - 同时用 `git status --short` 和 `git ls-files --others --exclude-standard` 捕捉未跟踪的新文件，避免漏记刚创建但尚未 add 的核心文件
    - 用 `git log --oneline -5` 了解最近的提交
    - 没有 git 则对比 memo 中记录的文件列表和实际目录结构
 
@@ -131,6 +132,8 @@ project/
 1. **检测变更**：
    ```bash
    git diff --name-only HEAD
+   git status --short
+   git ls-files --others --exclude-standard
    ```
    或者对比 memo 中记录的文件和当前目录。
 
@@ -162,7 +165,8 @@ project/
 
 | 检测方式 | 适用场景 | 说明 |
 |---------|---------|------|
-| `git diff --name-only HEAD` | Git 项目（推荐） | 快速、准确 |
+| `git diff --name-only HEAD` | Git 项目（推荐） | 快速查看已跟踪文件的修改 |
+| `git status --short` + `git ls-files --others --exclude-standard` | Git 项目补充检查 | 捕捉未跟踪的新文件，避免 ProjectMemo 漏记新模块 |
 | 对比 memo 文件列表 vs 实际目录 | 非 Git 项目 | 稍慢但可行 |
 | 对比文件修改时间 | 非 Git 项目备选 | 不够精确 |
 

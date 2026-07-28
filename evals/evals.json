@@ -35,6 +35,7 @@
       "files": [],
       "expectations": [
         "AI 检测了项目变更（使用 git diff 或文件对比）",
+        "Change detection considers untracked new files via git status --short or git ls-files --others --exclude-standard",
         "ProjectMemo.md 中新增了 src/utils/fetch.ts 的条目",
         "ProjectMemo.md 中 src/components/Modal.tsx 的条目被更新",
         "ProjectMemo.md 中移除了 src/old/legacy.ts 的条目",
